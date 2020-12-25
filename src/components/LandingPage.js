@@ -30,6 +30,7 @@ const Circle = (data) => {
 
 const LandingPage = () => {
     return (
+        <div className="container">
         <svg id="landing-page">
             <Line start="1" end="2" />
             <Line start="1" end="4" />
@@ -59,7 +60,7 @@ const LandingPage = () => {
             
             <Circle node="1" fill="green" />
             <Circle node="2" fill="#a2c0d9" />
-            
+
             <svg x="53%" y="35%">
                 <text className="name" x="-400" y="70">Nathaniel</text>
                 <circle className="node" cx="0" cy="0" fill="red" />
@@ -78,6 +79,7 @@ const LandingPage = () => {
             <Circle node="9" fill="#ffbf58" />
             <Circle node="10" fill="green" />
         </svg>
+        </div>
     )
 }
 export default LandingPage

@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,800&display=swap');
 
+.container {
+    display: table-row;
+}
+
 #landing-page {
-    min-height: 100vh;
-    height: 100vh;
+    display: table-cell;
+    height: 100%;
     min-width: 100vw;
     width: 100vw;
     top: 0;
     left: 0;
-    bottom: 0;
+    bottom: 20px;
     right: 0;
-    background-color: #dae6f0;
 }
 
 svg {

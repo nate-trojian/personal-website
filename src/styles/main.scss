@@ -1,7 +1,18 @@
 @import './mixins';
 
 @import './landing-page';
+@import './footer.scss';
 
-body {
+html, body {
     margin: 0;
+    height: 100%;
+}
+
+#global-wrapper {
+    display: table;
+    background-color: #dae6f0;
+}
+
+div {
+    height: 100%;
 }
