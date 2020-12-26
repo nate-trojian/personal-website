@@ -3,16 +3,17 @@
 @import './landing-page';
 @import './footer.scss';
 
-html, body {
+html, body, #___gatsby {
     margin: 0;
     height: 100%;
 }
 
-#global-wrapper {
-    display: table;
-    background-color: #dae6f0;
+div[tabindex='-1'] {
+    height: 100%;
 }
 
-div {
+#global-wrapper {
     height: 100%;
+    display: table;
+    background-color: #dae6f0;
 }

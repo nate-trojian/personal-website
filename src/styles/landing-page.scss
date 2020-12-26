@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,800&display=swap');
 
 .container {
+    height: 100%;
     display: table-row;
 }
 
@@ -25,12 +26,14 @@ svg {
         stroke: black;
         stroke-width: 2px;
     }
-    animation: colorize 3s 1;
+    animation: colorize 4s 1 ease-in-out;
 }
 @keyframes colorize {
-    0% {fill: black;}
-    10% {fill: black;}
-    100% {fill: fill;}
+    0% {fill: black; stroke: fill;}
+    10% {fill: black; stroke: fill; stroke-width: 0;}
+    80% {fill: fill; stroke: black; stroke-width: 0;}
+    90% {fill: fill; stroke: black; stroke-width: 2px;}
+    100% {fill: fill; stroke: fill; stroke-width: 0;}
 }
 
 .edge {
@@ -48,4 +51,9 @@ svg {
     0% {opacity: 0;}
     20% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+#tooltip {
+    background-color: black;
+    color: white;
 }
