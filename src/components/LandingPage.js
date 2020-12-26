@@ -55,6 +55,8 @@ const LandingPage = () => {
             <Line start="3" end="4" />
             <Line start="3" end="9" />
 
+            <Line start="4" end="5" />
+
             <Line start="5" end="7" />
             <Line start="5" end="8" />
             <Line start="5" end="9" />
@@ -68,22 +70,20 @@ const LandingPage = () => {
             <Line start="8" end="10" />
 
             <Line start="9" end="10" />
-            
-            <Circle node="1" type="A" />
-            <Circle node="2" type="D" />
 
             <svg x="53%" y="35%">
                 <text className="name" x="-400" y="70">Nathaniel</text>
-                <circle className="node" cx="0" cy="0" {...colorMap["B"]} />
-            </svg>
-            
-            <svg x="50%" y="50%">
-                <line className="edge" x1="0" y1="0" x2="55" y2="0" />
-                <text className="name" x="-225" y="70">Trojian</text>
-                <circle className="node" cx="0" cy="0" {...colorMap["C"]} />
-                <circle className="node" cx="55" cy="0" {...colorMap["A"]} />
             </svg>
 
+            <svg x="50%" y="50%">
+                <text className="name" x="-225" y="70">Trojian</text>
+            </svg>
+            
+            <Circle node="1" type="A" />
+            <Circle node="2" type="D" />
+            <Circle node="3" type="B" />
+            <Circle node="4" type="C" />
+            <Circle node="5" type="A" />
             <Circle node="6" type="A" />
             <Circle node="7" type="B" />
             <Circle node="8" type="D" />
