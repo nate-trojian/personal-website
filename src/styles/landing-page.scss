@@ -31,9 +31,9 @@ svg {
 @keyframes colorize {
     0% {fill: black; stroke: fill;}
     10% {fill: black; stroke: fill; stroke-width: 0;}
-    80% {fill: fill; stroke: black; stroke-width: 0;}
-    90% {fill: fill; stroke: black; stroke-width: 2px;}
-    100% {fill: fill; stroke: fill; stroke-width: 0;}
+    60% {fill: fill; stroke: black; stroke-width: 0;}
+    70% {fill: fill; stroke: black; stroke-width: 2px;}
+    100% {fill: fill; stroke: black; stroke-width: 0;}
 }
 
 .edge {
