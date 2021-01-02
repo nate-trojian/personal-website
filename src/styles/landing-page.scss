@@ -18,7 +18,7 @@
 
 .node {
     r: 12;
-    &:hover{
+    &:hover, &:focus {
         stroke: black;
         stroke-width: 2px;
     }
