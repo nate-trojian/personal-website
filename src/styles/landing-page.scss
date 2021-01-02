@@ -16,10 +16,6 @@
     right: 0;
 }
 
-svg {
-    overflow: visible;
-}
-
 .node {
     r: 12;
     &:hover{
@@ -42,10 +38,13 @@ svg {
 }
 
 .name {
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: bold;
-    font-size: 100px;
-    animation: fade-in 8s 1;
+    overflow: visible;
+    & text {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: bold;
+        font-size: 100px;
+        animation: fade-in 8s 1;
+    }
 }
 @keyframes fade-in {
     0% {opacity: 0;}

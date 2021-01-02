@@ -71,12 +71,12 @@ const LandingPage = () => {
 
             <Line start="9" end="10" />
 
-            <svg x="53%" y="35%">
-                <text className="name" x="-400" y="70">Nathaniel</text>
+            <svg className="name" x="53%" y="35%">
+                <text x="-400" y="70">Nathaniel</text>
             </svg>
 
-            <svg x="50%" y="50%">
-                <text className="name" x="-225" y="70">Trojian</text>
+            <svg className="name" x="50%" y="50%">
+                <text x="-225" y="70">Trojian</text>
             </svg>
             
             <Circle node="1" type="A" />
