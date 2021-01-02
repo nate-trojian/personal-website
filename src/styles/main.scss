@@ -3,6 +3,8 @@
 @import './landing-page';
 @import './footer.scss';
 
+@import "~bootstrap/scss/bootstrap";
+
 html, body, #___gatsby {
     margin: 0;
     height: 100%;
