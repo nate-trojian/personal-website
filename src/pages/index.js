@@ -1,7 +1,7 @@
 import React from 'react'
-import SocialFooter from '../components/SocialFooter'
-import LandingPage from '../components/LandingPage'
-import Seo from '../components/Seo'
+import Footer from '../components/footer'
+import LandingPage from '../components/landing-page'
+import Seo from '../components/seo'
 import '../styles/main.scss'
 
 export default () => {
@@ -9,7 +9,7 @@ export default () => {
     <div id="global-wrapper">
       <Seo />
       <LandingPage />
-      <SocialFooter />
+      <Footer />
     </div>
   )
 }
