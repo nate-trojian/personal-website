@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Seo from '../components/Seo'
-import SocialFooter from '../components/SocialFooter'
+import Seo from '../components/seo'
+import SocialFooter from '../components/footer'
 
 const BlogTemplate = ({ data }) => {
   const post = data.markdownRemark
