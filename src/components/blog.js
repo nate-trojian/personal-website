@@ -34,39 +34,33 @@ const Blog = () => {
 
   if (posts.length === 0) {
     return (
-      <div id="global-wrapper">
-        <Seo />
+      <section id="blog-posts">
         <p>
           No blog posts found
-                </p>
-        <SocialFooter />
-      </div>
+          </p>
+      </section>
     )
   }
 
   return (
-    <div id="global-wrapper">
-      <Seo />
-      <section id="blog-posts">
-        <Container>
-          {posts.map(post => (
-            <Row>
-              <Col>
-                <h3>{post.frontmatter.title}</h3>
-                <p dangerouslySetInnerHTML={{
-                  __html: post.frontmatter.description || post.excerpt,
-                }} />
-                <small className="text-muted">{post.frontmatter.date}</small>
-              </Col>
-              <Col>
-                <img alt="test"></img>
-              </Col>
-            </Row>
-          ))}
-        </Container>
-      </section>
-      <SocialFooter />
-    </div>
+    <section id="blog-posts">
+      <Container>
+        {posts.map(post => (
+          <Row>
+            <Col>
+              <h3>{post.frontmatter.title}</h3>
+              <p dangerouslySetInnerHTML={{
+                __html: post.frontmatter.description || post.excerpt,
+              }} />
+              <small className="text-muted">{post.frontmatter.date}</small>
+            </Col>
+            <Col>
+              <img alt="test"></img>
+            </Col>
+          </Row>
+        ))}
+      </Container>
+    </section>
   )
 }
 
