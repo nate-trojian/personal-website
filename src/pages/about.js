@@ -1,6 +1,6 @@
 import React from 'react'
-import Seo from '../components/Seo'
-import SocialFooter from '../components/SocialFooter'
+import Seo from '../components/seo'
+import SocialFooter from '../components/footer'
 
 export default () => {
     return (

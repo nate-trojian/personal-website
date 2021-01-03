@@ -5,8 +5,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import Seo from '../components/Seo'
-import SocialFooter from '../components/SocialFooter'
+import Seo from '../components/seo'
+import SocialFooter from '../components/footer'
 
 const Blog = ({ data }) => {
     const posts = data.allMarkdownRemark.nodes
