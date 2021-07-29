@@ -1,9 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Segment, Grid, Card, Image, Divider, Header } from 'semantic-ui-react'
 
 const query = graphql`
   query {
@@ -14,14 +11,13 @@ const query = graphql`
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
+        id
         excerpt
-        fields {
-          slug
-        }
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          slug
         }
       }
     }
@@ -32,35 +28,30 @@ const Blog = () => {
   const data = useStaticQuery(query)
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <section id="blog-posts">
-        <p>
-          No blog posts found
-          </p>
-      </section>
-    )
-  }
-
   return (
-    <section id="blog-posts">
-      <Container>
+    <Segment vertical style={{padding: '0em 6em', borderBottom: "none"}}>
+      <Divider horizontal>
+        <Header as='h2'>
+          Blog
+        </Header>
+      </Divider>
+      <Grid centered>
         {posts.map(post => (
-          <Row>
-            <Col>
-              <h3>{post.frontmatter.title}</h3>
-              <p dangerouslySetInnerHTML={{
-                __html: post.frontmatter.description || post.excerpt,
-              }} />
-              <small className="text-muted">{post.frontmatter.date}</small>
-            </Col>
-            <Col>
-              <img alt="test"></img>
-            </Col>
-          </Row>
+          <Grid.Row key={post.id} columns={1}>
+            <Card href={post.frontmatter.slug}>
+              { post.frontmatter.img && <Image src={post.frontmatter.img} floated='left'/> }
+              <Card.Content textAlign="left">
+                <Card.Header>{post.frontmatter.title}</Card.Header>
+                <Card.Meta>{post.frontmatter.date}</Card.Meta>
+                <Card.Description dangerouslySetInnerHTML={{
+                  __html: post.frontmatter.description || post.excerpt,
+                }} />
+              </Card.Content>
+            </Card>
+          </Grid.Row>
         ))}
-      </Container>
-    </section>
+      </Grid>
+    </Segment>
   )
 }
 

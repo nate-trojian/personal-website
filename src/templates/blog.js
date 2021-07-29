@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Seo from '../components/seo'
-import SocialFooter from '../components/footer'
+import Seo from '../components/Seo'
+import Footer from '../components/Footer'
 
 const BlogTemplate = ({ data }) => {
   const post = data.markdownRemark
@@ -38,7 +38,7 @@ const BlogTemplate = ({ data }) => {
           </li>
         </ul>
       </nav>
-      <SocialFooter />
+      <Footer />
     </div>
   )
 }

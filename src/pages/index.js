@@ -1,13 +1,15 @@
 import React from 'react'
-import Footer from '../components/footer'
-import LandingPage from '../components/landing-page'
-import Seo from '../components/seo'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import LandingPage from '../components/LandingPage'
+import Seo from '../components/Seo'
 import '../styles/main.scss'
 
 export default () => {
   return (
     <div id="global-wrapper">
       <Seo />
+      <Header />
       <LandingPage />
       <Footer />
     </div>

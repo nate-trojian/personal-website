@@ -1,10 +1,10 @@
 @import './mixins';
 
+@import '~semantic-ui-css/semantic.min.css';
+
 @import './landing-page.scss';
 @import './footer.scss';
 @import './blog.scss';
-
-@import "~bootstrap/scss/bootstrap";
 
 html, body, #___gatsby {
     margin: 0;
@@ -19,5 +19,4 @@ div[tabindex='-1'] {
     height: 100%;
     width: 100%;
     display: table;
-    background-color: #dae6f0;
 }
