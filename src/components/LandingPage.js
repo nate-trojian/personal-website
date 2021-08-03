@@ -98,7 +98,7 @@ const LandingPage = () => {
                 <Circle node="9" type="C" />
                 <Circle node="10" type="A" />
             </svg>
-            <ReactTooltip id='svg-tooltip' place="top" type="dark" effect="solid" componentDidUpdate={ReactTooltip.rebuild()} />
+            <ReactTooltip id='svg-tooltip' place="top" type="dark" effect="solid" />
         </div>
     )
 }
